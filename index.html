@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>JZimz</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;900&display=swap');
+
+      body {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        color: #0d0f11;
+      }
+      strong.intro {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      
+      #page-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+      }
+
+      .profile-photo {
+        width: 130px;
+        height: 130px;
+        background-color: white;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-image: url('assets/profile.jpeg');
+        background-size: 118%;
+        background-position: 70% 28%
+      }
+      .profile-photo:hover {
+        background-image: url('assets/profile-alt.png');
+        background-size: 100%;
+      }
+
+      .profile-text h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        margin-top: 0.5em;
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .page-body {
+        padding: 0 20px;
+        max-width: 520px;
+      }
+      
+      .linkage {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .linkage .link-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 400;
+        color: #0d0f11;
+      }
+      
+      /* Style of the social links is still a work in progress.
+      .link-item.twitch .icon {
+        background-color: #9146FF;
+      }
+      .link-item.instagram .icon {
+
+      }
+      .link-item.twitter .icon {
+        background-color: #4FA0EC;
+      }
+      .link-item.discord .icon {
+        background-color: #7289DA;
+      } */
+
+      .linkage .icon {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        background-color: black;
+      }
+
+      @media screen and (max-width: 400px) {
+        .linkage .icon {
+          height: 64px;
+          width: 64px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Shoutout to Nick Lewis for providing some inspiration on this page.
+      Go checkout his work! https://codepen.io/nickylew/ -->
+    <div id="app">
+      <div id="page-home">
+        <div class="profile-photo"></div>
+        <div class="profile-text">
+          <h1>JZimz</h1>
+        </div>
+        <div class="page-body">
+          <div class="about">
+            <strong class="intro">Hello!</strong> My name is Jason but most 
+            know me as JZimz <em>(jay zimz)</em> online. I’ve always loved 
+            gaming and really enjoy getting to interact with fellow gamers on 
+            stream along with creating gaming related content. I'm typically 
+            playing Apex Legends but definitely like mix it up from time to 
+            time. 
+          </div>
+          <div class="linkage">
+            <a href="https://www.twitch.tv/jzimz" class="link-item twitch">
+              <div class="icon"></div>
+              <div class="label">Twitch</div>
+            </a>
+            <a href="https://discord.gg/aV37twc" class="link-item discord">
+              <div class="icon"></div>
+              <div class="label">Discord</div>
+            </a>
+            <a href="https://www.instagram.com/jzimz.tv/" 
+              class="link-item instagram">
+              <div class="icon"></div>
+              <div class="label">Instagram</div>
+            </a>
+            <a href="https://twitter.com/jzimztv" class="link-item twitter">
+              <div class="icon"></div>
+              <div class="label">Twitter</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
