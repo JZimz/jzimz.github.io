@@ -17,11 +17,16 @@
 <body>
   Sending you over to my Twitch channel! If you are not redirected
   automatically,
-  <a href="twitch://stream/jzimz">
+  <a href="https://www.twitch.tv/jzimz">
     click here
   </a>.
   <script>
-    window.location.replace('twitch://stream/jzimz');
+    window.onload = () => {
+      window.location.replace('twitch://stream/jzimz');
+      setTimeout(() => {
+        window.location.replace('https://www.twitch.tv/jzimz');
+      }, 1000)
+    }
   </script>
 </body>
 
