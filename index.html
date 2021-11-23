@@ -62,7 +62,7 @@
 
       .linkage {
         font-family: 'Roboto', sans-serif;
-        margin-top: 40px;
+        margin-top: 30px;
         text-align: center;
         display: flex;
         justify-content: space-evenly;
@@ -77,26 +77,15 @@
         color: #0d0f11;
       }
 
-      /* Style of the social links is still a work in progress.
-      .link-item.twitch .icon {
-        background-color: #9146FF;
+      .linkage img {
+        height: 36px;
+        width: 36px;
       }
-      .link-item.instagram .icon {
 
-      }
-      .link-item.twitter .icon {
-        background-color: #4FA0EC;
-      }
-      .link-item.discord .icon {
-        background-color: #7289DA;
-      } */
-
-      .linkage .icon {
-        height: 90px;
-        width: 90px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        background-color: black;
+      .donate {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
       }
 
       @media screen and (max-width: 400px) {
@@ -118,37 +107,36 @@
           <h1>JZimz</h1>
         </div>
         <div class="page-body">
-          <div class="about">
+          <section class="about">
             <strong class="intro">Hello!</strong> My name is Jason but most
             know me as JZimz <em>(jay zimz)</em> online. I’ve always loved
             gaming and really enjoy getting to interact with fellow gamers on
             stream along with creating gaming related content. I'm typically
             playing Apex Legends but definitely like mix it up from time to
             time.
-          </div>
-          <div class="linkage">
+          </section>
+          <section class="linkage">
             <a href="https://www.twitch.tv/jzimz" target="_blank"
               class="link-item twitch">
-              <div class="icon"></div>
-              <div class="label">Twitch</div>
+              <img src="assets/icons/twitch.svg" alt="Twitch logo">
             </a>
             <a href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
               target="_blank"
               class="link-item youtube">
-              <div class="icon"></div>
-              <div class="label">YouTube</div>
+              <img src="assets/icons/youtube.svg" alt="YouTube logo">
             </a>
             <a href="https://www.instagram.com/jzimztv/" target="_blank"
               class="link-item instagram">
-              <div class="icon"></div>
-              <div class="label">Instagram</div>
+              <img src="assets/icons/instagram.svg" alt="Instagram icon">
             </a>
             <a href="https://twitter.com/jzimztv" target="_blank"
               class="link-item twitter">
-              <div class="icon"></div>
-              <div class="label">Twitter</div>
+              <img src="assets/icons/twitter.svg" alt="Twitter icon">
             </a>
-          </div>
+          </section>
+          <section class="donate">
+            <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jzimz" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+          </section>
         </div>
       </div>
     </div>
