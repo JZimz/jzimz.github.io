@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/bio-template", {data:[{}],fetch:{},mutations:void 0});

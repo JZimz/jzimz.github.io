@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/downloads", {data:[{}],fetch:{},mutations:void 0});

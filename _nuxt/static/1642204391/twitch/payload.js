@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/twitch", {data:[{}],fetch:{},mutations:void 0});
