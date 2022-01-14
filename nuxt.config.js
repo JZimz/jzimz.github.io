@@ -54,7 +54,7 @@ export default {
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
     // https://google-analytics.nuxtjs.org/
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -113,12 +113,9 @@ export default {
   // Google Fonts configuration: https://google-fonts.nuxtjs.org/options
   googleFonts: {
     families: {
-      Roboto: {
-        wght: [900],
-      },
-      'Roboto+Slab': {
-        wght: [100, 200, 300, 400, 500, 600],
-        ital: [100],
+      Poppins: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       },
     },
   },
