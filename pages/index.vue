@@ -67,6 +67,39 @@ export default {
     YoutubeIcon,
     InstagramIcon,
   },
+  head: {
+    // TODO: See if there is already a library that will translate a JSON object
+    // to the corresponding open-id/twitter card meta tags. Starting with just
+    // twitter cards for now.
+    meta: [
+      {
+        hid: 'home-twitter:card',
+        name: 'twitter:card',
+        content: 'summary',
+      },
+      {
+        hid: 'home-twitter:site',
+        name: 'twitter:site',
+        content: '@jzimz',
+      },
+      {
+        hid: 'home-twitter:title',
+        name: 'twitter:title',
+        content: 'JZimz - Developer | Gamer',
+      },
+      {
+        hid: 'home-twitter:description',
+        name: 'twitter:description',
+        content:
+          'I play video games, code things, and try to share what I learn along the way!',
+      },
+      {
+        hid: 'home-twitter:image',
+        name: 'twitter:image',
+        content: 'https://jzimz.com/img/profile.png',
+      },
+    ],
+  },
   // TODO: Articles are a WIP
   // async asyncData ({ $content, params }) {
   //   const articles = await $content('articles')
