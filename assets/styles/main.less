@@ -13,16 +13,29 @@
 
   --color: var(--black);
   --bg: var(--white);
+  --border-color: var(--light-grey-1);
+  --font-size: 16px;
+  --font-size-secondary: 14px;
+  --font-size-tertiary: 12px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-heavy: 900;
 }
 
 .dark-mode {
   --color: var(--semi-white);
   --bg: var(--black);
+  --border-color: var(--grey-1);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size);
   background-color: var(--bg);
   color: var(--color);
   transition: background-color 0.3s;
@@ -35,4 +48,28 @@ a:visited,
 a:hover,
 a:active {
   color: var(--color);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: var(--font-weight-heavy);
+  margin: 0;
+}
+h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: var(--font-size);
+  color: var(--grey-1);
+  font-weight: var(--font-weight-light);
+}
+
+// Simple layout helpers
+.jz-flex-row {
+  > :not(:last-child) {
+    margin-right: 4px;
+  }
 }

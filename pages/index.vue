@@ -44,11 +44,11 @@
         <buy-me-a-coffee-icon size="2x" />
       </a>
     </section>
-    <!-- TODO: WIP <section-divider />
+    <section><div class="divider"></div></section>
     <section class="articles">
-      <h2>Latest Articles</h2>
-      <article-list :articles="articles" />
-    </section> -->
+      <article-card-list :articles="articles" />
+      <nuxt-link to="articles"> Read More </nuxt-link>
+    </section>
   </div>
 </template>
 
@@ -71,6 +71,17 @@ export default {
     InstagramIcon,
     TwitterIcon,
     BuyMeACoffeeIcon,
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles')
+      .only(['title', 'slug', 'createdAt', 'description', 'readingTime'])
+      .sortBy('createdAt', 'desc')
+      .limit(3)
+      .fetch()
+
+    return {
+      articles,
+    }
   },
   head: {
     // TODO: See if there is already a library that will translate a JSON object
@@ -105,18 +116,6 @@ export default {
       },
     ],
   },
-  // TODO: Articles are a WIP
-  // async asyncData ({ $content, params }) {
-  //   const articles = await $content('articles')
-  //     .only(['title', 'slug', 'createdAt', 'description'])
-  //     .sortBy('age', 'desc')
-  //     .limit(3)
-  //     .fetch()
-
-  //   return {
-  //     articles
-  //   }
-  // },
 }
 </script>
 
@@ -134,6 +133,11 @@ export default {
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    .divider {
+      border-top: 1px solid var(--border-color);
+      border-radius: 5px;
     }
   }
 
