@@ -37,7 +37,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/styles/main.less'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -55,6 +55,8 @@ export default {
     '@nuxtjs/google-fonts',
     // https://google-analytics.nuxtjs.org/
     '@nuxtjs/google-analytics',
+    // https://github.com/nuxt-community/color-mode-module
+    '@nuxtjs/color-mode',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

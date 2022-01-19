@@ -115,17 +115,8 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .page-home {
-  // TODO: Make a base site style
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  @black: #0d0f11;
-  @white: #ffffff;
-  strong {
-    font-weight: 600;
-  }
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,21 +132,6 @@ export default {
     }
   }
 
-  // TODO: It's probably bad to have these all be the same color so I need to
-  // look into this more.
-  a:link {
-    color: @black;
-  }
-  a:visited {
-    color: @black;
-  }
-  a:hover {
-    color: @black;
-  }
-  a:active {
-    color: @black;
-  }
-
   .hero {
     display: flex;
     flex-direction: column;
@@ -165,12 +141,12 @@ export default {
     &-photo {
       width: 300px;
       height: 300px;
-      background-color: @white;
+      background-color: var(--bg);
       border-radius: 50%;
       background-repeat: no-repeat;
       background-image: url('/img/profile.png');
       background-size: 100%;
-      border: solid 4px @black;
+      border: solid 4px var(--color);
       filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 
       &:hover {
@@ -190,7 +166,7 @@ export default {
     justify-content: space-evenly;
 
     .feather {
-      stroke: @black;
+      stroke: var(--color);
     }
   }
 }

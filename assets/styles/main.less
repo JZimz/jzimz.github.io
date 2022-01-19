@@ -1,0 +1,38 @@
+:root {
+  --black: #212529;
+  --semi-black: #343a40;
+  --dark-grey-1: #495057;
+  --dark-grey-2: #6c757d;
+  --grey-1: #6c757d;
+  --grey-2: #adb5bd;
+  --grey-3: #ced4da;
+  --light-grey-1: #dee2e6;
+  --light-grey-2: #e9ecef;
+  --semi-white: #f8f9fa;
+  --white: #ffffff;
+
+  --color: var(--black);
+  --bg: var(--white);
+}
+
+.dark-mode {
+  --color: var(--semi-white);
+  --bg: var(--black);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
+}
+
+// TODO: It's probably bad to have these all be the same color so I need to
+// look into this more.
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color);
+}
