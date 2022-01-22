@@ -18,27 +18,30 @@
     </section>
     <section class="linkage">
       <a href="https://www.twitch.tv/jzimz" target="_blank" class="link-item">
-        <twitch-icon size="3x" />
+        <twitch-icon />
       </a>
       <a
         href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
         target="_blank"
         class="link-item"
       >
-        <youtube-icon size="3x" />
+        <you-tube-icon />
+      </a>
+      <a href="https://www.tiktok.com/@jzimz" target="_blank" class="link-item">
+        <tik-tok-icon />
       </a>
       <a
         href="https://www.instagram.com/jzimztv/"
         target="_blank"
         class="link-item"
       >
-        <instagram-icon size="3x" />
+        <instagram-icon />
       </a>
       <a href="https://twitter.com/jzimz" target="_blank" class="link-item">
-        <twitter-icon size="3x" />
+        <twitter-icon />
       </a>
       <a href="http://buymeacoffee.com/jzimz" target="_blank" class="link-item">
-        <coffee-icon size="3x" />
+        <buy-me-a-coffee-icon />
       </a>
     </section>
     <!-- TODO: WIP <section-divider />
@@ -50,22 +53,36 @@
 </template>
 
 <script>
+// import {
+//   TwitchIcon,
+//   TwitterIcon,
+//   // CoffeeIcon,
+//   YoutubeIcon,
+//   InstagramIcon,
+// } from 'vue-feather-icons'
 import {
+  YouTubeIcon,
   TwitchIcon,
-  TwitterIcon,
-  CoffeeIcon,
-  YoutubeIcon,
+  TikTokIcon,
   InstagramIcon,
-} from 'vue-feather-icons'
+  TwitterIcon,
+  BuyMeACoffeeIcon,
+} from 'vue-simple-icons'
 
 export default {
   name: 'IndexPage',
   components: {
+    // TwitchIcon,
+    // TwitterIcon,
+    // CoffeeIcon,
+    YouTubeIcon,
     TwitchIcon,
-    TwitterIcon,
-    CoffeeIcon,
-    YoutubeIcon,
+    TikTokIcon,
     InstagramIcon,
+    TwitterIcon,
+    BuyMeACoffeeIcon,
+    // YoutubeIcon,
+    // InstagramIcon,
   },
   head: {
     // TODO: See if there is already a library that will translate a JSON object
