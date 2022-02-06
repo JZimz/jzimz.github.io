@@ -1,6 +1,6 @@
 <template>
   <article class="article-card">
-    <NuxtLink class="article-card__link" :to="`/blog/${slug}`">
+    <NuxtLink class="article-card__link" :to="`/articles/${slug}`">
       <h2>{{ title }}</h2>
       <h3 v-if="description" class="description">
         {{ description }}

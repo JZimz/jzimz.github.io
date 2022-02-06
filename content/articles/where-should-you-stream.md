@@ -1,6 +1,6 @@
 ---
 title: Where is the best place to stream?
-description: 'Mixer is shutting down on July 22, 2020. So what now?'
+description: Mixer is shutting down on July 22, 2020. So what now?
 createdAt: '2020-06-23'
 ---
 

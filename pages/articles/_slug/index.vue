@@ -21,11 +21,16 @@
         </div>
       </div>
       <nuxt-content class="blog-post__content" :document="page" />
+      <section><div class="divider"></div></section>
+      <article-footer></article-footer>
     </article>
   </div>
 </template>
 
 <script>
+import { toMeta } from '@/util/meta.util'
+const HOST = 'jzimz.com';
+
 export default {
   name: 'PageBlog',
   async asyncData({ $content, params }) {
@@ -33,6 +38,24 @@ export default {
 
     return {
       page,
+    }
+  },
+  head() {
+    const { slug, title, description, thumbnail } = this.page;
+
+    return {
+      title: `JZimz | ${title}`,
+      meta: toMeta(slug, {
+        'twitter:card': 'summary_large_image',
+        'twitter:site': '@jzimz',
+        'twitter:creator': '@jzimz',
+        'og:url': `https://${HOST}/articles/${slug}`,
+        'og:title': title,
+        'og:description': description,
+        'og:image': `https://${HOST}${thumbnail}`,
+        // TODO: Look into the "article" type
+        // 'og:type': 'website',
+      })
     }
   },
 }
@@ -58,6 +81,7 @@ export default {
   }
 
   .blog-post {
+    width: 100%;
     max-width: 680px;
 
     &__header {
@@ -84,8 +108,11 @@ export default {
         }
       }
     }
-    &__content {
-    }
+  }
+
+  .divider {
+    border: solid 1px var(--border-color);
+    margin: 40px 100px;
   }
 }
 </style>
