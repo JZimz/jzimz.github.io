@@ -31,7 +31,10 @@ export default {
 <style lang="less" scoped>
 .article-footer {
   text-align: center;
-  padding: 0 100px;
+
+  @media only screen and (min-width: 600px) {
+    padding: 0 100px;
+  }
 
   &__title {
     margin-bottom: 10px;
