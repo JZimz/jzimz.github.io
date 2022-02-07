@@ -44,11 +44,11 @@
         <buy-me-a-coffee-icon size="2x" />
       </a>
     </section>
-    <!-- TODO: WIP <section-divider />
+    <section><div class="divider"></div></section>
     <section class="articles">
-      <h2>Latest Articles</h2>
-      <article-list :articles="articles" />
-    </section> -->
+      <article-card-list :articles="articles" />
+      <nuxt-link to="articles"> Read More </nuxt-link>
+    </section>
   </div>
 </template>
 
@@ -61,6 +61,7 @@ import {
   TwitterIcon,
   BuyMeACoffeeIcon,
 } from 'vue-simple-icons'
+import { toMeta } from '@/util/meta.util'
 
 export default {
   name: 'IndexPage',
@@ -72,51 +73,33 @@ export default {
     TwitterIcon,
     BuyMeACoffeeIcon,
   },
-  head: {
-    // TODO: See if there is already a library that will translate a JSON object
-    // to the corresponding open-id/twitter card meta tags. Starting with just
-    // twitter cards for now.
-    meta: [
-      {
-        hid: 'home-twitter:card',
-        name: 'twitter:card',
-        content: 'summary',
-      },
-      {
-        hid: 'home-twitter:site',
-        name: 'twitter:site',
-        content: '@jzimz',
-      },
-      {
-        hid: 'home-twitter:title',
-        name: 'twitter:title',
-        content: 'JZimz - Developer | Gamer',
-      },
-      {
-        hid: 'home-twitter:description',
-        name: 'twitter:description',
-        content:
-          'I play video games, code things, and try to share what I learn along the way!',
-      },
-      {
-        hid: 'home-twitter:image',
-        name: 'twitter:image',
-        content: 'https://jzimz.com/img/profile.png',
-      },
-    ],
-  },
-  // TODO: Articles are a WIP
-  // async asyncData ({ $content, params }) {
-  //   const articles = await $content('articles')
-  //     .only(['title', 'slug', 'createdAt', 'description'])
-  //     .sortBy('age', 'desc')
-  //     .limit(3)
-  //     .fetch()
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles')
+      .only(['title', 'slug', 'createdAt', 'description', 'readingTime'])
+      .sortBy('createdAt', 'desc')
+      .limit(3)
+      .fetch()
 
-  //   return {
-  //     articles
-  //   }
-  // },
+    return {
+      articles,
+    }
+  },
+  head: {
+    htmlAttrs: {
+      prefix: 'og: https://ogp.me/ns#',
+    },
+    meta: toMeta({
+      'twitter:card': 'summary',
+      'twitter:site': '@jzimz',
+      'twitter:creator': '@jzimz',
+      'og:url': 'https://jzimz.com',
+      'og:title': 'JZimz - Developer | Gamer',
+      'og:description':
+        'I play video games, code things, and try to share what I learn along the way!',
+      'og:image': 'https://jzimz.com/img/profile.png',
+      'og:type': 'website',
+    }),
+  },
 }
 </script>
 
@@ -134,6 +117,11 @@ export default {
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    .divider {
+      border-top: 1px solid var(--border-color);
+      border-radius: 5px;
     }
   }
 
