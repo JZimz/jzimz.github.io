@@ -17,30 +17,52 @@
       </div>
     </section>
     <section class="linkage">
-      <a href="https://www.twitch.tv/jzimz" target="_blank" class="link-item">
+      <a
+        href="https://www.twitch.tv/jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
         <twitch-icon size="2x" />
       </a>
       <a
         href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
+        rel="noopener"
         target="_blank"
         class="link-item"
       >
         <you-tube-icon size="2x" />
       </a>
-      <a href="https://www.tiktok.com/@jzimz" target="_blank" class="link-item">
+      <a
+        href="https://www.tiktok.com/@jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
         <tik-tok-icon size="2x" />
       </a>
       <a
         href="https://www.instagram.com/jzimztv/"
+        rel="noopener"
         target="_blank"
         class="link-item"
       >
         <instagram-icon size="2x" />
       </a>
-      <a href="https://twitter.com/jzimz" target="_blank" class="link-item">
+      <a
+        href="https://twitter.com/jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
         <twitter-icon size="2x" />
       </a>
-      <a href="http://buymeacoffee.com/jzimz" target="_blank" class="link-item">
+      <a
+        href="http://buymeacoffee.com/jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
         <buy-me-a-coffee-icon size="2x" />
       </a>
     </section>
