@@ -139,13 +139,13 @@ export default {
       background-color: var(--bg);
       border-radius: 50%;
       background-repeat: no-repeat;
-      background-image: url('/img/profile.png');
+      background-image: url('/img/profile.webp');
       background-size: 100%;
       border: solid 4px var(--color);
       filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 
       &:hover {
-        background-image: url('/img/profile-alt.png');
+        background-image: url('/img/profile-alt.webp');
         background-size: 100%;
       }
     }
