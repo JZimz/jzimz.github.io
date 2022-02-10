@@ -47,7 +47,7 @@
     <section><div class="divider"></div></section>
     <section class="articles">
       <article-card-list :articles="articles" />
-      <nuxt-link to="articles"> Read More </nuxt-link>
+      > Check out all of my <nuxt-link to="articles">blog posts</nuxt-link>
     </section>
   </div>
 </template>
@@ -89,6 +89,8 @@ export default {
       prefix: 'og: https://ogp.me/ns#',
     },
     meta: toMeta({
+      description:
+        'JZimz is full-time web developer, gamer, and content creator sharing what he learns along the way.',
       'twitter:card': 'summary',
       'twitter:site': '@jzimz',
       'twitter:creator': '@jzimz',

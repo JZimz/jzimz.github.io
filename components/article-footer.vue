@@ -11,6 +11,7 @@
       <a
         class="action-link jz-flex-row"
         href="https://twitter.com/jzimz"
+        rel="noopener"
         target="_blank"
       >
         <twitter-icon /> Follow me on Twitter
