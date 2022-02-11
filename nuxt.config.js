@@ -1,3 +1,33 @@
+const createSitemapRoutes = async () => {
+  const { $content } = require('@nuxt/content')
+  const posts = await $content('articles').fetch()
+  const routes = []
+
+  for (const post of posts) {
+    routes.push(`articles/${post.slug}`)
+  }
+
+  return routes
+}
+
+// Convenience redirects.
+const redirects = [
+  {
+    name: 'twitch',
+    to: 'https://www.twitch.tv/jzimz',
+    toDeep: 'twitch://stream/jzimz',
+  },
+  { name: 'twitter', to: 'https://twitter.com/jzimz' },
+  { name: 'youtube', to: 'https://www.youtube.com/jzimz' },
+  { name: 'yt', to: 'https://www.youtube.com/jzimz' },
+  { name: 'discord', to: 'https://discord.gg/aV37twc' },
+  {
+    name: 'downloads',
+    to: 'https://drive.google.com/drive/folders/1VgERaPXuk9pz-YFNMO9emE0FnOT3kRVk?usp=sharing',
+  },
+  { name: 'bio-template', to: 'https://github.com/jzimz/bio-template' },
+]
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -63,6 +93,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://sitemap.nuxtjs.org/
+    '@nuxtjs/sitemap',
   ],
 
   // Hooks: https://content.nuxtjs.org/advanced#hooks
@@ -74,27 +106,17 @@ export default {
     },
   },
 
+  sitemap: {
+    hostname: 'https://jzimz.com',
+    gzip: true,
+    exclude: redirects.map(({ name }) => `/${name}`),
+    routes: createSitemapRoutes,
+  },
+
   router: {
     extendRoutes(routes, resolve) {
       const component = resolve(__dirname, 'components/redirect-link.vue')
-      const redirects = [
-        {
-          name: 'twitch',
-          to: 'https://www.twitch.tv/jzimz',
-          toDeep: 'twitch://stream/jzimz',
-        },
-        { name: 'twitter', to: 'https://twitter.com/jzimz' },
-        { name: 'youtube', to: 'https://www.youtube.com/jzimz' },
-        { name: 'yt', to: 'https://www.youtube.com/jzimz' },
-        { name: 'discord', to: 'https://discord.gg/aV37twc' },
-        {
-          name: 'downloads',
-          to: 'https://drive.google.com/drive/folders/1VgERaPXuk9pz-YFNMO9emE0FnOT3kRVk?usp=sharing',
-        },
-        { name: 'bio-template', to: 'https://github.com/jzimz/bio-template' },
-      ]
 
-      // Add convenience redirects.
       redirects.forEach(({ name, to, toDeep }) => {
         routes.push({
           name,
