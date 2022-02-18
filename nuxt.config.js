@@ -83,8 +83,6 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
-    // https://google-analytics.nuxtjs.org/
-    '@nuxtjs/google-analytics',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
   ],
@@ -95,6 +93,8 @@ export default {
     '@nuxt/content',
     // https://sitemap.nuxtjs.org/
     '@nuxtjs/sitemap',
+    // https://github.com/nuxt-community/google-gtag-module
+    '@nuxtjs/google-gtag',
   ],
 
   // Hooks: https://content.nuxtjs.org/advanced#hooks
@@ -144,8 +144,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // Google Analytics configuration: https://google-analytics.nuxtjs.org/options
-  googleAnalytics: {
+  // Google Analytics configuration:
+  // https://github.com/nuxt-community/google-gtag-module#using-top-level-options
+  'google-gtag': {
     id: 'UA-170360802-1',
   },
 
