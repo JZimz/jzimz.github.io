@@ -2,7 +2,7 @@
   <nav class="site-nav">
     <ul>
       <li><nuxt-link to="/">Home</nuxt-link></li>
-      <li><nuxt-link to="/articles">Articles</nuxt-link></li>
+      <li><nuxt-link to="/blog">Blog</nuxt-link></li>
     </ul>
   </nav>
 </template>

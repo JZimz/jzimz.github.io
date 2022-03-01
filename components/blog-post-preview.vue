@@ -1,12 +1,12 @@
 <template>
-  <article class="article-card">
-    <NuxtLink class="article-card__link" :to="`/articles/${slug}`">
+  <article class="blog-post-preview">
+    <NuxtLink class="blog-post-preview__link" :to="`/blog/${slug}`">
       <h2>{{ title }}</h2>
       <h3 v-if="description" class="description">
         {{ description }}
       </h3>
     </NuxtLink>
-    <div class="article-card__footer jz-flex-row">
+    <div class="blog-post-preview__footer jz-flex-row">
       <span>{{ createdAt | formatDate }}</span>
       <span>&middot;</span>
       <span>{{ readingTime.text }}</span>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ArticlePreview',
+  name: 'BlogPostPreview',
   props: {
     createdAt: {
       type: String,
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.article-card {
+.blog-post-preview {
   &__link {
     text-decoration: none;
   }

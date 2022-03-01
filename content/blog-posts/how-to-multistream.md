@@ -45,7 +45,7 @@ Fortunately, it doesn’t take much computing power to forward a stream to multi
 4. Choose a Linode Plan. The cheapest Nanode 1 GB plan is enough for what we’re doing
 5. Choose a password
 6. Click “Create Linode”
-   <article-image src="/img/how-to-multistream_1.gif"></article-image>
+   <blog-post-image src="/img/how-to-multistream_1.gif"></blog-post-image>
 
 ### Setup the stream forwarding service (NGINX)
 

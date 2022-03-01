@@ -1,13 +1,13 @@
 <template>
-  <section class="article-footer">
-    <div class="article-footer__title">
+  <section class="blog-post-footer">
+    <div class="blog-post-footer__title">
       <strong>Thanks for reading!</strong>
     </div>
-    <div class="article-footer__content">
+    <div class="blog-post-footer__content">
       Hopefully it was helpful. Follow me on Twitter where I post similar
       content and connect with fellow gamers.
     </div>
-    <div class="article-footer__actions">
+    <div class="blog-post-footer__actions">
       <a
         class="action-link jz-flex-row"
         href="https://twitter.com/jzimz"
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.article-footer {
+.blog-post-footer {
   text-align: center;
 
   @media only screen and (min-width: 600px) {

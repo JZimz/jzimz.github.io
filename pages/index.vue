@@ -67,9 +67,9 @@
       </a>
     </section>
     <section><div class="divider"></div></section>
-    <section class="articles">
-      <article-card-list :articles="articles" />
-      > Check out all of my <nuxt-link to="articles">blog posts</nuxt-link>
+    <section class="blog-posts">
+      <blog-post-preview-list :posts="posts" />
+      > Check out all of my <nuxt-link to="blog">blog posts</nuxt-link>
     </section>
   </div>
 </template>
@@ -96,14 +96,14 @@ export default {
     BuyMeACoffeeIcon,
   },
   async asyncData({ $content, params }) {
-    const articles = await $content('articles')
+    const posts = await $content('blog-posts')
       .only(['title', 'slug', 'createdAt', 'description', 'readingTime'])
       .sortBy('createdAt', 'desc')
       .limit(3)
       .fetch()
 
     return {
-      articles,
+      posts,
     }
   },
   head: {

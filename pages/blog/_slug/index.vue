@@ -3,8 +3,8 @@
     <the-nav />
     <article class="blog-post">
       <div class="blog-post__header">
-        <h1>{{ page.title }}</h1>
-        <h3>{{ page.description }}</h3>
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post.description }}</h3>
         <div>
           <div class="meta jz-flex-row">
             <img
@@ -13,16 +13,16 @@
               alt="Author profile picture"
             />
             <nuxt-link class="author-name" to="/"> Jason Sims </nuxt-link>
-            <span>{{ page.createdAt | formatDate }}</span>
+            <span>{{ post.createdAt | formatDate }}</span>
             <span>&middot;</span>
-            <span>{{ page.readingTime.text }}</span>
+            <span>{{ post.readingTime.text }}</span>
           </div>
           <!-- TODO: Add share links here -->
         </div>
       </div>
-      <nuxt-content class="blog-post__content" :document="page" />
+      <nuxt-content class="blog-post__content" :document="post" />
       <section><div class="divider"></div></section>
-      <article-footer></article-footer>
+      <blog-post-footer></blog-post-footer>
     </article>
   </div>
 </template>
@@ -32,16 +32,16 @@ import { toMeta } from '@/util/meta.util'
 const HOST = 'jzimz.com'
 
 export default {
-  name: 'PageBlog',
+  name: 'PageBlogPost',
   async asyncData({ $content, params }) {
-    const page = await $content('articles', params.slug).fetch()
+    const post = await $content('blog-posts', params.slug).fetch()
 
     return {
-      page,
+      post,
     }
   },
   head() {
-    const { slug, title, description, thumbnail } = this.page
+    const { slug, title, description, thumbnail } = this.post
 
     return {
       htmlAttrs: {
@@ -52,7 +52,7 @@ export default {
         'twitter:card': 'summary_large_image',
         'twitter:site': '@jzimz',
         'twitter:creator': '@jzimz',
-        'og:url': `https://${HOST}/articles/${slug}`,
+        'og:url': `https://${HOST}/blog/${slug}`,
         'og:title': title,
         'og:description': description,
         'og:image': `https://${HOST}${thumbnail}`,

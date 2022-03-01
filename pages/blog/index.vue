@@ -1,27 +1,27 @@
 <template>
-  <div class="page-articles">
+  <div class="page-blog-posts">
     <the-nav />
-    <article-card-list class="page-articles__list" :articles="articles" />
+    <blog-post-preview-list class="page-blog-posts__list" :posts="posts" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageArticles',
+  name: 'PageBlogPosts',
   async asyncData({ $content, params }) {
-    const articles = await $content('articles')
+    const posts = await $content('blog-posts')
       .only(['title', 'slug', 'createdAt', 'description', 'readingTime'])
       .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
-      articles,
+      posts,
     }
   },
 }
 </script>
 <style lang="less" scoped>
-.page-articles {
+.page-blog-posts {
   padding: 40px 20px;
   display: flex;
   flex-direction: column;

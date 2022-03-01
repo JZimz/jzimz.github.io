@@ -1,10 +1,10 @@
 const createSitemapRoutes = async () => {
   const { $content } = require('@nuxt/content')
-  const posts = await $content('articles').fetch()
+  const posts = await $content('blog-posts').fetch()
   const routes = []
 
   for (const post of posts) {
-    routes.push(`articles/${post.slug}`)
+    routes.push(`blog/${post.slug}`)
   }
 
   return routes
