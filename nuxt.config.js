@@ -13,19 +13,23 @@ const createSitemapRoutes = async () => {
 // Convenience redirects.
 const redirects = [
   {
-    name: 'twitch',
+    path: '/twitch',
     to: 'https://www.twitch.tv/jzimz',
     toDeep: 'twitch://stream/jzimz',
   },
-  { name: 'twitter', to: 'https://twitter.com/jzimz' },
-  { name: 'youtube', to: 'https://www.youtube.com/jzimz' },
-  { name: 'yt', to: 'https://www.youtube.com/jzimz' },
-  { name: 'discord', to: 'https://discord.gg/aV37twc' },
+  { path: '/twitter', to: 'https://twitter.com/jzimz' },
+  { path: '/youtube', to: 'https://www.youtube.com/jzimz' },
+  { path: '/yt', to: 'https://www.youtube.com/jzimz' },
+  { path: '/discord', to: 'https://discord.gg/aV37twc' },
   {
-    name: 'downloads',
+    path: '/downloads',
     to: 'https://drive.google.com/drive/folders/1VgERaPXuk9pz-YFNMO9emE0FnOT3kRVk?usp=sharing',
   },
-  { name: 'bio-template', to: 'https://github.com/jzimz/bio-template' },
+  { path: '/bio-template', to: 'https://github.com/jzimz/bio-template' },
+  {
+    path: '/articles/:slug',
+    redirect: (to) => ({ path: `/blog/${to.params.slug}` }),
+  },
 ]
 
 export default {
@@ -109,7 +113,7 @@ export default {
   sitemap: {
     hostname: 'https://jzimz.com',
     gzip: true,
-    exclude: redirects.map(({ name }) => `/${name}`),
+    exclude: redirects.map(({ path }) => path),
     routes: createSitemapRoutes,
   },
 
@@ -117,17 +121,22 @@ export default {
     extendRoutes(routes, resolve) {
       const component = resolve(__dirname, 'components/redirect-link.vue')
 
-      redirects.forEach(({ name, to, toDeep }) => {
-        routes.push({
-          name,
-          path: `/${name}`,
-          component,
-          props: {
-            msg: `Sending you over to ${name}.`,
-            to,
-            toDeep,
-          },
-        })
+      redirects.forEach((route) => {
+        const { path, to, toDeep, redirect } = route
+        const dest = redirect
+          ? // Internal redirects
+            route
+          : // External redirects
+            {
+              path,
+              component,
+              props: {
+                to,
+                toDeep,
+              },
+            }
+
+        routes.push(dest)
       })
     },
   },
