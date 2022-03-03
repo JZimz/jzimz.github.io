@@ -1,12 +1,12 @@
 <template>
-  <div class="blog-post-video">
+  <div
+    ref="container"
+    class="blog-post-video"
+    :style="{
+      'background-image': `url(${placeholder})`,
+    }"
+  >
     <slot />
-    <img
-      v-if="placeholder"
-      class="placeholder-image"
-      :src="placeholder"
-      alt="Video thumbnail"
-    />
   </div>
 </template>
 
@@ -26,13 +26,13 @@ export default {
 .blog-post-video {
   position: relative;
   margin-top: 1em;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
 
-  .placeholder-image {
-    position: absolute;
-    left: 0;
-    top: 0;
+  > * {
+    display: block;
+    height: 100%;
     width: 100%;
-    z-index: -1;
   }
 }
 </style>

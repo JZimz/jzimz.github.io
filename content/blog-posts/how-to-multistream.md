@@ -5,7 +5,7 @@ thumbnail: /img/how-to-multistream_thumb.png
 ---
 
 <blog-post-video placeholder="/img/how-to-multistream_thumb.png">
-  <iframe width="680" height="382" src="https://www.youtube.com/embed/duvHW7P37Vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/duvHW7P37Vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </blog-post-video>
 
 Lately, I’ve been hearing a lot of talk about giving up on the Twitch Affiliate program and multistreaming to YouTube Gaming, Twitch, Facebook Gaming, or any other streaming platform you like for increased exposure to your content. I’m not going to get into the pros and cons of this approach in this article but will instead focus on how to multistream if you’re interested in doing so. More specifically, the cheapest way I’ve found to do it without overloading your upload connection to your internet provider. This should work with most streaming software but I’ll refer to OBS (Open Broadcaster Software) here.
