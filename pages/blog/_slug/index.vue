@@ -47,7 +47,7 @@ export default {
       htmlAttrs: {
         prefix: 'og: https://ogp.me/ns#',
       },
-      title: `JZimz | ${title}`,
+      title,
       meta: toMeta({
         'twitter:card': 'summary_large_image',
         'twitter:site': '@jzimz',
