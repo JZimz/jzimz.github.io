@@ -6,8 +6,8 @@
         <strong>Hello!</strong> My name is Jason but most know me as JZimz
         <em>(jay zimz)</em> online. I'm a full-time web developer that loves
         gaming and the process of creating content. Lately, you'll find me
-        playing Warzone but I'm into most FPS games and puzzle platformers. If
-        you'd like to get in touch,
+        playing the Zero Build mode in Fortnite but I'm into most Battle Royale
+        games and puzzle platformers. If you'd like to get in touch,
         <a
           target="_blank"
           href="https://twitter.com/messages/compose?recipient_id=1226548642397310976"
