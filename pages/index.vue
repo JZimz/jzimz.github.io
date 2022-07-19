@@ -26,6 +26,22 @@
         <twitch-icon size="2x" />
       </a>
       <a
+        href="https://twitter.com/jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
+        <twitter-icon size="2x" />
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
+        <you-tube-gaming-icon size="2x" />
+      </a>
+      <a
         href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
         rel="noopener"
         target="_blank"
@@ -49,22 +65,6 @@
       >
         <instagram-icon size="2x" />
       </a>
-      <a
-        href="https://twitter.com/jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <twitter-icon size="2x" />
-      </a>
-      <a
-        href="http://buymeacoffee.com/jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <buy-me-a-coffee-icon size="2x" />
-      </a>
     </section>
     <section><div class="divider"></div></section>
     <section class="blog-posts">
@@ -76,24 +76,24 @@
 
 <script>
 import {
+  YouTubeGamingIcon,
   YouTubeIcon,
   TwitchIcon,
   TikTokIcon,
   InstagramIcon,
   TwitterIcon,
-  BuyMeACoffeeIcon,
 } from 'vue-simple-icons'
 import { toMeta } from '@/util/meta.util'
 
 export default {
   name: 'IndexPage',
   components: {
+    YouTubeGamingIcon,
     YouTubeIcon,
     TwitchIcon,
     TikTokIcon,
     InstagramIcon,
     TwitterIcon,
-    BuyMeACoffeeIcon,
   },
   async asyncData({ $content, params }) {
     const posts = await $content('blog-posts')
