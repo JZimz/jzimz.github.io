@@ -18,22 +18,6 @@
     </section>
     <section class="linkage">
       <a
-        href="https://www.twitch.tv/jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <twitch-icon size="2x" />
-      </a>
-      <a
-        href="https://twitter.com/jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <twitter-icon size="2x" />
-      </a>
-      <a
         href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
         rel="noopener"
         target="_blank"
@@ -48,6 +32,14 @@
         class="link-item"
       >
         <you-tube-icon size="2x" />
+      </a>
+      <a
+        href="https://twitter.com/jzimz"
+        rel="noopener"
+        target="_blank"
+        class="link-item"
+      >
+        <twitter-icon size="2x" />
       </a>
       <a
         href="https://www.tiktok.com/@jzimz"
@@ -78,7 +70,6 @@
 import {
   YouTubeGamingIcon,
   YouTubeIcon,
-  TwitchIcon,
   TikTokIcon,
   InstagramIcon,
   TwitterIcon,
@@ -90,7 +81,6 @@ export default {
   components: {
     YouTubeGamingIcon,
     YouTubeIcon,
-    TwitchIcon,
     TikTokIcon,
     InstagramIcon,
     TwitterIcon,
