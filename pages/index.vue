@@ -2,6 +2,56 @@
   <div class="page-home">
     <section class="hero">
       <div class="hero-photo"></div>
+      <div class="linkage">
+        <a
+          href="https://www.twitch.tv/jzimz"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <twitch-icon size="2x" />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <you-tube-gaming-icon size="2x" />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <you-tube-icon size="2x" />
+        </a>
+        <a
+          href="https://twitter.com/jzimz"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <twitter-icon size="2x" />
+        </a>
+        <a
+          href="https://www.tiktok.com/@jzimz"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <tik-tok-icon size="2x" />
+        </a>
+        <a
+          href="https://www.instagram.com/jzimztv/"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <instagram-icon size="2x" />
+        </a>
+      </div>
       <div class="hero-content">
         <strong>Hello!</strong> My name is Jason but most know me as JZimz
         <em>(jay zimz)</em> online. I'm a full-time web developer that loves
@@ -16,48 +66,6 @@
         >
       </div>
     </section>
-    <section class="linkage">
-      <a
-        href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <you-tube-gaming-icon size="2x" />
-      </a>
-      <a
-        href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <you-tube-icon size="2x" />
-      </a>
-      <a
-        href="https://twitter.com/jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <twitter-icon size="2x" />
-      </a>
-      <a
-        href="https://www.tiktok.com/@jzimz"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <tik-tok-icon size="2x" />
-      </a>
-      <a
-        href="https://www.instagram.com/jzimztv/"
-        rel="noopener"
-        target="_blank"
-        class="link-item"
-      >
-        <instagram-icon size="2x" />
-      </a>
-    </section>
     <section><div class="divider"></div></section>
     <section class="blog-posts">
       <blog-post-preview-list :posts="posts" />
@@ -68,6 +76,7 @@
 
 <script>
 import {
+  TwitchIcon,
   YouTubeGamingIcon,
   YouTubeIcon,
   TikTokIcon,
@@ -79,6 +88,7 @@ import { toMeta } from '@/util/meta.util'
 export default {
   name: 'IndexPage',
   components: {
+    TwitchIcon,
     YouTubeGamingIcon,
     YouTubeIcon,
     TikTokIcon,
@@ -163,7 +173,8 @@ export default {
     }
 
     &-content {
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 30px;
     }
   }
 
@@ -171,6 +182,8 @@ export default {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
 
     .feather {
       stroke: var(--color);
