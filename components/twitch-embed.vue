@@ -26,7 +26,7 @@ export default {
       const video = this.collection
         ? `collection=${this.collection}`
         : `video=${this.video}`
-      let parent = 'www.jzimz.com'
+      let parent = 'jzimz.com'
 
       if (process.env.NODE_ENV === 'development') parent = 'localhost'
 
