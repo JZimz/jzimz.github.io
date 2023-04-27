@@ -26,9 +26,9 @@ export default {
       const video = this.collection
         ? `collection=${this.collection}`
         : `video=${this.video}`
-      // TODO: Figure out how to set parent
-      const parent =
-        process.env.NODE_ENV !== 'production' ? 'localhost' : 'www.jzimz.com'
+      let parent = 'www.jzimz.com'
+
+      if (process.env.NODE_ENV === 'development') parent = 'localhost'
 
       return `https://player.twitch.tv/?${video}&parent=${parent}`
     },
