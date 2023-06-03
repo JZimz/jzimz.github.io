@@ -2,6 +2,7 @@
 title: How to Build a Restream Server
 description: You don't NEED Restream.io to multistream. Try building it yourself for less!
 thumbnail: /img/how-to-multistream_thumb.png
+createdAt: '2022-03-14'
 ---
 
 <blog-post-video placeholder="/img/how-to-multistream_thumb.png">
