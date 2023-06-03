@@ -57,8 +57,8 @@
         <strong>Hello!</strong> My name is Jason but most know me as JZimz
         <em>(jay zimz)</em> online. I'm a full-time web developer that loves
         gaming and the process of creating content. Lately, you'll find me
-        playing the Zero Build mode in Fortnite but I'm into most Battle Royale
-        games and puzzle platformers. If you'd like to get in touch,
+        playing Apex Legends but I'm into most Battle Royale games and puzzle
+        platformers. If you'd like to get in touch,
         <a
           target="_blank"
           href="https://twitter.com/messages/compose?recipient_id=1226548642397310976"
@@ -139,10 +139,7 @@ export default {
     padding: 0 20px;
     box-sizing: border-box;
     max-width: 520px;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 
     .divider {
       border-top: 1px solid var(--border-color);
@@ -175,7 +172,6 @@ export default {
 
     &-content {
       margin-top: 10px;
-      margin-bottom: 30px;
     }
   }
 
