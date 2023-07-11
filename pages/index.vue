@@ -2,7 +2,7 @@
   <div class="page-home">
     <section class="hero">
       <!-- <div class="hero-photo"></div> -->
-      <twitch-embed video="1829350994" />
+      <twitch-embed video="1866096776" />
       <div class="linkage">
         <a
           href="https://www.twitch.tv/jzimz"
