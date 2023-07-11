@@ -1,8 +1,11 @@
 ---
 title: How To Parse Twitch Emotes With tmi.js
 description: You don't have to! There's a util for that now.
+thumbnail: /img/how-to-parse-twitch-emotes_thumb.png
 createdAt: '2023-06-02'
 ---
+
+<blog-post-image src="/img/how-to-parse-twitch-emotes_thumb.png"></blog-post-image>
 
 If you've ever tried to build a Twitch chat bot in JavaScript before, I'm sure you've come across the [tmi.js](https://tmijs.com/) library. It's an incredibly useful wrapper around the Twitch IRC API and I recommend trying it out. **If you want to handle emotes though you'll need to do a little extra work.** Here's how
 

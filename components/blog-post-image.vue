@@ -1,12 +1,7 @@
 <template>
-  <img
-    :src="src"
-    :alt="alt"
-    :style="{
-      'margin-bottom': '20px',
-      width: '100%',
-    }"
-  />
+  <p>
+    <img :src="src" :alt="alt" :style="{ width: '100%' }" />
+  </p>
 </template>
 
 <script>
