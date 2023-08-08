@@ -41,7 +41,8 @@ export default {
     }
   },
   head() {
-    const { slug, title, description, thumbnail } = this.post
+    const { slug, title, description, thumbnail, keywords, createdAt } =
+      this.post
 
     return {
       htmlAttrs: {
@@ -56,8 +57,8 @@ export default {
         'og:title': title,
         'og:description': description,
         'og:image': `https://${HOST}${thumbnail}`,
-        // TODO: Look into the "article" type
-        // 'og:type': 'website',
+        'article:published_time': createdAt,
+        keywords,
       }),
     }
   },
