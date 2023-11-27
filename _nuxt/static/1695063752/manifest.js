@@ -1,1 +1,0 @@
-__NUXT_JSONP__("manifest.js", {routes:["\u002Ftwitch","\u002F","\u002Fyt","\u002Ftwitter","\u002Fdiscord","\u002Fyoutube","\u002Fdownloads","\u002Fbio-template","\u002Fblog","\u002Fblog\u002Fshould-streamers-buy-the-rodecaster-duo","\u002Fblog\u002Fhow-to-parse-twitch-emotes-with-tmijs","\u002Fblog\u002Fhow-to-multistream","\u002Fblog\u002Fwhere-should-you-stream"]})
