@@ -2,8 +2,15 @@
   <div class="page-home">
     <section class="hero">
       <div class="hero-photo"></div>
-      <!-- <twitch-embed video="1920688699" /> -->
       <div class="linkage">
+        <a
+          href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
+          rel="noopener"
+          target="_blank"
+          class="link-item"
+        >
+          <you-tube-icon size="2x" />
+        </a>
         <a
           href="https://www.twitch.tv/jzimz"
           rel="noopener"
@@ -13,23 +20,7 @@
           <twitch-icon size="2x" />
         </a>
         <a
-          href="https://www.youtube.com/channel/UC2aEpE5nPsW9BV9-MpSxzMg"
-          rel="noopener"
-          target="_blank"
-          class="link-item"
-        >
-          <you-tube-gaming-icon size="2x" />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCxyaFKlRSXJ-D0-UICa6W3g/"
-          rel="noopener"
-          target="_blank"
-          class="link-item"
-        >
-          <you-tube-icon size="2x" />
-        </a>
-        <a
-          href="https://twitter.com/jzimz"
+          href="https://x.com/jzimz"
           rel="noopener"
           target="_blank"
           class="link-item"
@@ -37,15 +28,7 @@
           <twitter-icon size="2x" />
         </a>
         <a
-          href="https://www.tiktok.com/@jzimz"
-          rel="noopener"
-          target="_blank"
-          class="link-item"
-        >
-          <tik-tok-icon size="2x" />
-        </a>
-        <a
-          href="https://www.instagram.com/jzimztv/"
+          href="https://www.instagram.com/jzimzlabs/"
           rel="noopener"
           target="_blank"
           class="link-item"
@@ -57,11 +40,11 @@
         <strong>Hello!</strong> My name is Jason but most know me as JZimz
         <em>(jay zimz)</em> online. I'm a full-time web developer that loves
         gaming and the process of creating content. Lately, you'll find me
-        playing Apex Legends but I'm into most Battle Royale games and puzzle
-        platformers. If you'd like to get in touch,
+        building a ROM Manager for retro gaming and hacking together custom
+        Minecraft add-ons. If you'd like to get in touch,
         <a
           target="_blank"
-          href="https://twitter.com/messages/compose?recipient_id=1226548642397310976"
+          href="https://x.com/messages/compose?recipient_id=1226548642397310976"
           class="twitter-dm-link"
           >my DMs are open!</a
         >
@@ -78,9 +61,7 @@
 <script>
 import {
   TwitchIcon,
-  YouTubeGamingIcon,
   YouTubeIcon,
-  TikTokIcon,
   InstagramIcon,
   TwitterIcon,
 } from 'vue-simple-icons'
@@ -90,9 +71,7 @@ export default {
   name: 'IndexPage',
   components: {
     TwitchIcon,
-    YouTubeGamingIcon,
     YouTubeIcon,
-    TikTokIcon,
     InstagramIcon,
     TwitterIcon,
   },
@@ -163,11 +142,6 @@ export default {
       background-size: 100%;
       border: solid 4px var(--color);
       filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-
-      &:hover {
-        background-image: url('/img/profile-alt.webp');
-        background-size: 100%;
-      }
     }
 
     &-content {
